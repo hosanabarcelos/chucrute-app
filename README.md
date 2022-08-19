@@ -1,0 +1,1 @@
+# chucrute-app
