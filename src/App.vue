@@ -1,23 +1,25 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+    <div id="app">
+        <router-view/>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+    name: 'App'
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+}
+h1, h2, h3 {
+    margin: 0;
 }
 </style>
