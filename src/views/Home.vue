@@ -26,8 +26,8 @@ export default {
     name: 'Home',
     data() {
         return {
-            title: 'Olá, querido(a) paciente!',
-            subtitle: 'Eu sou o Chucrute e vou dar início ao seu atendimento. Preciso de algumas informações importantes para avaliarmos o seu caso. Vamos lá?',
+            title: 'Olá, querido(a) cliente!',
+            subtitle: 'Eu sou o Frank e vou dar início ao seu atendimento. Preciso que você responda algumas perguntas para conseguirmos agilizar o seu pedido. Vamos lá?',
             defaultOptions: {
                 animationData: animationData
             }

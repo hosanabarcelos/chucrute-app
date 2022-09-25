@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1664130305685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1664130329719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,13 @@\n export default new Router({\r\n   routes: [\r\n     {\r\n         path: '/',\r\n-        name: 'Home',\r\n-        component: Home,\r\n+        name: 'landing',\r\n+        component: Landing,\r\n     },\r\n     {\r\n-      path: '/',\r\n+      path: '/home',\r\n       name: 'Home',\r\n       component: Home,\r\n     },\r\n     {\r\n"
+                },
+                {
+                    "date": 1664130353113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import Vue from 'vue';\r\n import Router from 'vue-router';\r\n+import Landing from '@/views/Landing';\r\n import Home from '@/views/Home';\r\n import Chat from '@/views/Chat';\r\n \r\n Vue.use(Router);\r\n"
+                },
+                {
+                    "date": 1664130361914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n export default new Router({\r\n   routes: [\r\n     {\r\n         path: '/',\r\n-        name: 'landing',\r\n+        name: 'Landing',\r\n         component: Landing,\r\n     },\r\n     {\r\n       path: '/home',\r\n"
+                },
+                {
+                    "date": 1664130381690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,22 +6,22 @@\n \r\n Vue.use(Router);\r\n \r\n export default new Router({\r\n-  routes: [\r\n-    {\r\n-        path: '/',\r\n-        name: 'Landing',\r\n-        component: Landing,\r\n-    },\r\n-    {\r\n-      path: '/home',\r\n-      name: 'Home',\r\n-      component: Home,\r\n-    },\r\n-    {\r\n-        path: '/chat',\r\n-        name: 'Chat',\r\n-        component: Chat,\r\n-    }\r\n-  ]\r\n+    routes: [\r\n+        {\r\n+            path: '/',\r\n+            name: 'Landing',\r\n+            component: Landing,\r\n+        },\r\n+        {\r\n+            path: '/home',\r\n+            name: 'Home',\r\n+            component: Home,\r\n+        },\r\n+        {\r\n+            path: '/chat',\r\n+            name: 'Chat',\r\n+            component: Chat,\r\n+        }\r\n+    ]\r\n })\r\n"
+                }
+            ],
+            "date": 1664130305685,
+            "name": "Commit-0",
+            "content": "import Vue from 'vue';\r\nimport Router from 'vue-router';\r\nimport Home from '@/views/Home';\r\nimport Chat from '@/views/Chat';\r\n\r\nVue.use(Router);\r\n\r\nexport default new Router({\r\n  routes: [\r\n    {\r\n        path: '/',\r\n        name: 'Home',\r\n        component: Home,\r\n    },\r\n    {\r\n      path: '/',\r\n      name: 'Home',\r\n      component: Home,\r\n    },\r\n    {\r\n        path: '/chat',\r\n        name: 'Chat',\r\n        component: Chat,\r\n    }\r\n  ]\r\n})\r\n"
+        }
+    ]
+}

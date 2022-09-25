@@ -1,0 +1,538 @@
+{
+    "sourceFile": "src/views/Landing.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 130,
+            "patches": [
+                {
+                    "date": 1664130406461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1664130455340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,13 @@\n <template>\r\n     <h1>OIIIIIIIIIIIIIIIIII</h1>\r\n-</template>\n\\ No newline at end of file\n+</template>\r\n+\r\n+<script>\r\n+export default {\r\n+    \r\n+}\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664130489736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,42 @@\n <template>\r\n-    <h1>OIIIIIIIIIIIIIIIIII</h1>\r\n+  <div class=\"home__container\">\r\n+        <div class=\"home__container-content\">\r\n+            <div class=\"home__content\">\r\n+                <lottie\r\n+                    :options=\"defaultOptions\"\r\n+                    :width=\"200\"\r\n+                    :height=\"200\"\r\n+                />\r\n+                <h2>{{ title }}</h2>\r\n+                <p>{{ subtitle }}</p>\r\n+                <primary-button\r\n+                    path=\"/chat\"\r\n+                    text=\"Iniciar atendimento\"\r\n+                />\r\n+            </div>\r\n+        </div>\r\n+  </div>\r\n </template>\r\n \r\n <script>\r\n+import * as animationData from '../assets/animations/wave.json';\r\n+import PrimaryButton from '../components/PrimaryButton.vue';\r\n+\r\n export default {\r\n-    \r\n+    name: 'Home',\r\n+    data() {\r\n+        return {\r\n+            title: 'Olá, querido(a) cliente!',\r\n+            subtitle: 'Eu sou o Frank e vou dar início ao seu atendimento. Preciso que você responda algumas perguntas para conseguirmos agilizar o seu pedido. Vamos lá?',\r\n+            defaultOptions: {\r\n+                animationData: animationData\r\n+            }\r\n+        }\r\n+    },\r\n+    components: {\r\n+        PrimaryButton,\r\n+    }\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1664130515628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,14 +6,14 @@\n                     :options=\"defaultOptions\"\r\n                     :width=\"200\"\r\n                     :height=\"200\"\r\n                 />\r\n-                <h2>{{ title }}</h2>\r\n+                <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n                 <primary-button\r\n                     path=\"/chat\"\r\n                     text=\"Iniciar atendimento\"\r\n-                />\r\n+                /> -->\r\n             </div>\r\n         </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1664130532037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n import * as animationData from '../assets/animations/wave.json';\r\n import PrimaryButton from '../components/PrimaryButton.vue';\r\n \r\n export default {\r\n-    name: 'Home',\r\n+    name: 'Landing',\r\n     data() {\r\n         return {\r\n             title: 'Olá, querido(a) cliente!',\r\n             subtitle: 'Eu sou o Frank e vou dar início ao seu atendimento. Preciso que você responda algumas perguntas para conseguirmos agilizar o seu pedido. Vamos lá?',\r\n"
+                },
+                {
+                    "date": 1664130551552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"200\"\r\n-                    :height=\"200\"\r\n+                    :width=\"400\"\r\n+                    :height=\"1000\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n                 <primary-button\r\n"
+                },
+                {
+                    "date": 1664130567242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"400\"\r\n-                    :height=\"1000\"\r\n+                    :width=\"1000\"\r\n+                    :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n                 <primary-button\r\n"
+                },
+                {
+                    "date": 1664130603035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"1000\"\r\n+                    :width=\"100000\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n"
+                },
+                {
+                    "date": 1664130610814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"100000\"\r\n+                    :width=\"1000\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n"
+                },
+                {
+                    "date": 1664130790070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"1000\"\r\n+                    :width=\"500\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n"
+                },
+                {
+                    "date": 1664130814554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,6 +39,9 @@\n }\r\n </script>\r\n \r\n <style scoped>\r\n+.home__content {\r\n+    position: absolute;;\r\n+}\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664130832873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n </script>\r\n \r\n <style scoped>\r\n .home__content {\r\n-    position: absolute;;\r\n+    position: absolute;\r\n+    bottom: 0;\r\n }\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664130848730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,7 +42,8 @@\n <style scoped>\r\n .home__content {\r\n     position: absolute;\r\n     bottom: 0;\r\n+    left: 0;\r\n }\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664130916181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,8 @@\n <style scoped>\r\n .home__content {\r\n     position: absolute;\r\n     bottom: 0;\r\n-    left: 0;\r\n+    left: -60px;\r\n }\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664130938413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"500\"\r\n+                    :width=\"800\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n"
+                },
+                {
+                    "date": 1664130986190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"800\"\r\n+                    :width=\"1000000\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n"
+                },
+                {
+                    "date": 1664130998037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"1000000\"\r\n+                    :width=\"800\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n"
+                },
+                {
+                    "date": 1664131008504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"800\"\r\n+                    :width=\"500\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n"
+                },
+                {
+                    "date": 1664131031379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,18 @@\n                     :options=\"defaultOptions\"\r\n                     :width=\"500\"\r\n                     :height=\"400\"\r\n                 />\r\n+                                <lottie\r\n+                    :options=\"defaultOptions\"\r\n+                    :width=\"500\"\r\n+                    :height=\"400\"\r\n+                />\r\n+                                <lottie\r\n+                    :options=\"defaultOptions\"\r\n+                    :width=\"500\"\r\n+                    :height=\"400\"\r\n+                />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n                 <primary-button\r\n                     path=\"/chat\"\r\n"
+                },
+                {
+                    "date": 1664131068924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <template>\r\n   <div class=\"home__container\">\r\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n+                <div class=\"naosei\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n                     :width=\"500\"\r\n                     :height=\"400\"\r\n@@ -16,8 +17,9 @@\n                     :options=\"defaultOptions\"\r\n                     :width=\"500\"\r\n                     :height=\"400\"\r\n                 />\r\n+                </div>\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n                 <primary-button\r\n                     path=\"/chat\"\r\n@@ -54,6 +56,9 @@\n     position: absolute;\r\n     bottom: 0;\r\n     left: -60px;\r\n }\r\n+.naosei {\r\n+    display: flex;\r\n+}\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131515228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,13 @@\n <template>\r\n   <div class=\"home__container\">\r\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n-                <div class=\"naosei\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n                     :width=\"500\"\r\n                     :height=\"400\"\r\n                 />\r\n-                                <lottie\r\n-                    :options=\"defaultOptions\"\r\n-                    :width=\"500\"\r\n-                    :height=\"400\"\r\n-                />\r\n-                                <lottie\r\n-                    :options=\"defaultOptions\"\r\n-                    :width=\"500\"\r\n-                    :height=\"400\"\r\n-                />\r\n-                </div>\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n                 <primary-button\r\n                     path=\"/chat\"\r\n@@ -56,9 +44,6 @@\n     position: absolute;\r\n     bottom: 0;\r\n     left: -60px;\r\n }\r\n-.naosei {\r\n-    display: flex;\r\n-}\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131577559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n </script>\r\n \r\n <style scoped>\r\n .home__content {\r\n+    width: 300px;\r\n     position: absolute;\r\n     bottom: 0;\r\n     left: -60px;\r\n }\r\n"
+                },
+                {
+                    "date": 1664131594054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,7 +44,8 @@\n     width: 300px;\r\n     position: absolute;\r\n     bottom: 0;\r\n     left: -60px;\r\n+    border-radius: 50%;;\r\n }\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131607171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"500\"\r\n+                    :width=\"200\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n@@ -44,8 +44,8 @@\n     width: 300px;\r\n     position: absolute;\r\n     bottom: 0;\r\n     left: -60px;\r\n-    border-radius: 50%;;\r\n+    border-radius: 50%;\r\n }\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131616589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n-                    :width=\"200\"\r\n+                    :width=\"400\"\r\n                     :height=\"400\"\r\n                 />\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n"
+                },
+                {
+                    "date": 1664131702180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n <template>\r\n   <div class=\"home__container\">\r\n+        <div class=\"landing-page__first-background\" />\r\n+        <div class=\"landing-page__second-background\" />\r\n+\r\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <lottie\r\n                     :options=\"defaultOptions\"\r\n@@ -39,13 +42,13 @@\n }\r\n </script>\r\n \r\n <style scoped>\r\n-.home__content {\r\n+/* .home__content {\r\n     width: 300px;\r\n     position: absolute;\r\n     bottom: 0;\r\n     left: -60px;\r\n     border-radius: 50%;\r\n-}\r\n+} */\r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131745875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,6 +49,32 @@\n     bottom: 0;\r\n     left: -60px;\r\n     border-radius: 50%;\r\n } */\r\n+    .landing-page__first-background {\r\n+        position: absolute;\r\n+        left: 0;\r\n+        bottom: 0;\r\n+        width: 828px;\r\n+        height: 828px;\r\n+        background-image: linear-gradient( rgba(255,0,0,0), #6174D1, rgba(255,0,0,0));\r\n+        border-radius: 50%;\r\n+        opacity: 0.2;\r\n+        filter: blur(168px);\r\n+        z-index: -1;\r\n+    }\r\n \r\n+    .landing-page__second-background {\r\n+        position: absolute;\r\n+        right: 0;\r\n+        top: -237px;\r\n+        width: 828px;\r\n+        height: 828px;\r\n+        background-image: linear-gradient( rgba(255,0,0,0), #7F3BD7, rgba(255,0,0,0));\r\n+        border-radius: 50%;\r\n+        opacity: 0.2;\r\n+        filter: blur(168px);\r\n+        z-index: -1;\r\n+    }\r\n+\r\n+\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131764196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,13 @@\n         <div class=\"landing-page__second-background\" />\r\n \r\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n-                <lottie\r\n+                <!-- <lottie\r\n                     :options=\"defaultOptions\"\r\n                     :width=\"400\"\r\n                     :height=\"400\"\r\n-                />\r\n+                /> -->\r\n                 <!-- <h2>{{ title }}</h2>\r\n                 <p>{{ subtitle }}</p>\r\n                 <primary-button\r\n                     path=\"/chat\"\r\n"
+                },
+                {
+                    "date": 1664131778001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div class=\"home__container\">\r\n         <div class=\"landing-page__first-background\" />\r\n-        <div class=\"landing-page__second-background\" />\r\n+        <!-- <div class=\"landing-page__second-background\" /> -->\r\n \r\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <!-- <lottie\r\n"
+                },
+                {
+                    "date": 1664131783489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div class=\"home__container\">\r\n         <div class=\"landing-page__first-background\" />\r\n-        <!-- <div class=\"landing-page__second-background\" /> -->\r\n+        <div class=\"landing-page__second-background\" />\r\n \r\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <!-- <lottie\r\n"
+                },
+                {
+                    "date": 1664131802484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n         left: 0;\r\n         bottom: 0;\r\n         width: 828px;\r\n         height: 828px;\r\n-        background-image: linear-gradient( rgba(255,0,0,0), #6174D1, rgba(255,0,0,0));\r\n+        background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n         border-radius: 50%;\r\n         opacity: 0.2;\r\n         filter: blur(168px);\r\n         z-index: -1;\r\n@@ -68,9 +68,9 @@\n         right: 0;\r\n         top: -237px;\r\n         width: 828px;\r\n         height: 828px;\r\n-        background-image: linear-gradient( rgba(255,0,0,0), #7F3BD7, rgba(255,0,0,0));\r\n+        background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n         border-radius: 50%;\r\n         opacity: 0.2;\r\n         filter: blur(168px);\r\n         z-index: -1;\r\n"
+                },
+                {
+                    "date": 1664131823266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n         height: 828px;\r\n         background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n         border-radius: 50%;\r\n         opacity: 0.2;\r\n-        filter: blur(168px);\r\n+        \r\n         z-index: -1;\r\n     }\r\n \r\n     .landing-page__second-background {\r\n"
+                },
+                {
+                    "date": 1664131851330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n <template>\r\n   <div class=\"home__container\">\r\n         <div class=\"landing-page__first-background\" />\r\n-        <div class=\"landing-page__second-background\" />\r\n \r\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <!-- <lottie\r\n@@ -49,32 +48,18 @@\n     bottom: 0;\r\n     left: -60px;\r\n     border-radius: 50%;\r\n } */\r\n-    .landing-page__first-background {\r\n-        position: absolute;\r\n-        left: 0;\r\n-        bottom: 0;\r\n-        width: 828px;\r\n-        height: 828px;\r\n-        background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-        border-radius: 50%;\r\n-        opacity: 0.2;\r\n-        \r\n-        z-index: -1;\r\n-    }\r\n+.landing-page__first-background {\r\n+    position: absolute;\r\n+    left: 0;\r\n+    bottom: 0;\r\n+    width: 828px;\r\n+    height: 828px;\r\n+    background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n+    border-radius: 50%;\r\n+    opacity: 0.2; \r\n+    z-index: -1;\r\n+}\r\n \r\n-    .landing-page__second-background {\r\n-        position: absolute;\r\n-        right: 0;\r\n-        top: -237px;\r\n-        width: 828px;\r\n-        height: 828px;\r\n-        background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-        border-radius: 50%;\r\n-        opacity: 0.2;\r\n-        filter: blur(168px);\r\n-        z-index: -1;\r\n-    }\r\n \r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131879237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,18 +48,20 @@\n     bottom: 0;\r\n     left: -60px;\r\n     border-radius: 50%;\r\n } */\r\n-.landing-page__first-background {\r\n-    position: absolute;\r\n-    left: 0;\r\n-    bottom: 0;\r\n-    width: 828px;\r\n-    height: 828px;\r\n-    background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-    border-radius: 50%;\r\n-    opacity: 0.2; \r\n-    z-index: -1;\r\n-}\r\n \r\n+    .landing-page__first-background {\r\n+        position: absolute;\r\n+        right: 0;\r\n+        top: -237px;\r\n+        width: 828px;\r\n+        height: 828px;\r\n+        background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n+        border-radius: 50%;\r\n+        opacity: 0.2;\r\n+        filter: blur(168px);\r\n+        z-index: -1;\r\n+    }\r\n \r\n+\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131884838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,19 +49,18 @@\n     left: -60px;\r\n     border-radius: 50%;\r\n } */\r\n \r\n-    .landing-page__first-background {\r\n-        position: absolute;\r\n-        right: 0;\r\n-        top: -237px;\r\n-        width: 828px;\r\n-        height: 828px;\r\n-        background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-        border-radius: 50%;\r\n-        opacity: 0.2;\r\n-        filter: blur(168px);\r\n-        z-index: -1;\r\n-    }\r\n+.landing-page__first-background {\r\n+    position: absolute;\r\n+    right: 0;\r\n+    top: -237px;\r\n+    width: 828px;\r\n+    height: 828px;\r\n+    background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n+    border-radius: 50%;\r\n+    opacity: 0.2;\r\n+    z-index: -1;\r\n+}\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664131893874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n \r\n .landing-page__first-background {\r\n     position: absolute;\r\n     right: 0;\r\n-    top: -237px;\r\n+   \r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius: 50%;\r\n"
+                },
+                {
+                    "date": 1664131918203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,8 @@\n \r\n .landing-page__first-background {\r\n     position: absolute;\r\n     right: 0;\r\n-   \r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius: 50%;\r\n"
+                },
+                {
+                    "date": 1664131930616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,9 @@\n \r\n .landing-page__first-background {\r\n     position: absolute;\r\n     right: 0;\r\n+    bottom: 0;\r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius: 50%;\r\n"
+                },
+                {
+                    "date": 1664131943787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius: 50%;\r\n-    opacity: 0.2;\r\n+    opacity: 032;\r\n     z-index: -1;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1664131953118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius: 50%;\r\n-    opacity: 032;\r\n+    opacity: 0.5;\r\n     z-index: -1;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1664131964727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,8 +58,9 @@\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius: 50%;\r\n     opacity: 0.5;\r\n+     filter: blur(16px);\r\n     z-index: -1;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1664131974337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius: 50%;\r\n     opacity: 0.5;\r\n-     filter: blur(16px);\r\n+     filter: blur(50px);\r\n     z-index: -1;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1664131983988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,9 @@\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius: 50%;\r\n-    opacity: 0.5;\r\n-     filter: blur(50px);\r\n+    opacity: 0.3;\r\n     z-index: -1;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1664132002893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n } */\r\n \r\n .landing-page__first-background {\r\n     position: absolute;\r\n-    right: 0;\r\n+    right: -50px;\r\n     bottom: 0;\r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n"
+                },
+                {
+                    "date": 1664132070803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     bottom: 0;\r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-    border-radius: 50%;\r\n+    border-radius: 50% 0% 50% 0%;\r\n     opacity: 0.3;\r\n     z-index: -1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1664132087595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     bottom: 0;\r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-    border-radius: 50% 0% 50% 0%;\r\n+    border-radius: 50%  50% 0% 0%;\r\n     opacity: 0.3;\r\n     z-index: -1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1664132100736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     bottom: 0;\r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-    border-radius: 50%  50% 0% 0%;\r\n+    border-radius: 0% 50%  50%  0%;\r\n     opacity: 0.3;\r\n     z-index: -1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1664132130214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     bottom: 0;\r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-    border-radius: 0% 50%  50%  0%;\r\n+    border-radius:  50%  0%  0% 50% ;\r\n     opacity: 0.3;\r\n     z-index: -1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1664132141082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n } */\r\n \r\n .landing-page__first-background {\r\n     position: absolute;\r\n-    right: -50px;\r\n+    right: 0;\r\n     bottom: 0;\r\n     width: 828px;\r\n     height: 828px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n"
+                },
+                {
+                    "date": 1664132157567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     left: -60px;\r\n     border-radius: 50%;\r\n } */\r\n \r\n-.landing-page__first-background {\r\n+.landing-page__-background {\r\n     position: absolute;\r\n     right: 0;\r\n     bottom: 0;\r\n     width: 828px;\r\n"
+                },
+                {
+                    "date": 1664132169334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n-  <div class=\"home__container\">\r\n-        <div class=\"landing-page__first-background\" />\r\n+  <div class=\"landing-page__container\">\r\n+        <div class=\"landing-page__-background\" />\r\n \r\n         <div class=\"home__container-content\">\r\n             <div class=\"home__content\">\r\n                 <!-- <lottie\r\n"
+                },
+                {
+                    "date": 1664132178148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n   <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__-background\" />\r\n \r\n-        <div class=\"home__container-content\">\r\n+        <div class=\"landing-page__content\">\r\n             <div class=\"home__content\">\r\n                 <!-- <lottie\r\n                     :options=\"defaultOptions\"\r\n                     :width=\"400\"\r\n"
+                },
+                {
+                    "date": 1664132188475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n   <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__-background\" />\r\n \r\n         <div class=\"landing-page__content\">\r\n-            <div class=\"home__content\">\r\n                 <!-- <lottie\r\n                     :options=\"defaultOptions\"\r\n                     :width=\"400\"\r\n                     :height=\"400\"\r\n@@ -14,9 +13,8 @@\n                 <primary-button\r\n                     path=\"/chat\"\r\n                     text=\"Iniciar atendimento\"\r\n                 /> -->\r\n-            </div>\r\n         </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1664132228897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n   <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__-background\" />\r\n \r\n         <div class=\"landing-page__content\">\r\n+            <h1>{{ title }}</h1>\r\n                 <!-- <lottie\r\n                     :options=\"defaultOptions\"\r\n                     :width=\"400\"\r\n                     :height=\"400\"\r\n"
+                },
+                {
+                    "date": 1664132259021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n export default {\r\n     name: 'Landing',\r\n     data() {\r\n         return {\r\n-            title: 'Olá, querido(a) cliente!',\r\n+            title: 'Não sei o que Pinturas',\r\n             subtitle: 'Eu sou o Frank e vou dar início ao seu atendimento. Preciso que você responda algumas perguntas para conseguirmos agilizar o seu pedido. Vamos lá?',\r\n             defaultOptions: {\r\n                 animationData: animationData\r\n             }\r\n"
+                },
+                {
+                    "date": 1664132507052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n         <div class=\"landing-page__-background\" />\r\n \r\n         <div class=\"landing-page__content\">\r\n             <h1>{{ title }}</h1>\r\n+            <h4>{{ text }}</h4>\r\n                 <!-- <lottie\r\n                     :options=\"defaultOptions\"\r\n                     :width=\"400\"\r\n                     :height=\"400\"\r\n@@ -27,9 +28,9 @@\n     name: 'Landing',\r\n     data() {\r\n         return {\r\n             title: 'Não sei o que Pinturas',\r\n-            subtitle: 'Eu sou o Frank e vou dar início ao seu atendimento. Preciso que você responda algumas perguntas para conseguirmos agilizar o seu pedido. Vamos lá?',\r\n+            text: 'Tinta de qualidade para casa e negócios.',\r\n             defaultOptions: {\r\n                 animationData: animationData\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1664132527264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,19 +4,8 @@\n \r\n         <div class=\"landing-page__content\">\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n-                <!-- <lottie\r\n-                    :options=\"defaultOptions\"\r\n-                    :width=\"400\"\r\n-                    :height=\"400\"\r\n-                /> -->\r\n-                <!-- <h2>{{ title }}</h2>\r\n-                <p>{{ subtitle }}</p>\r\n-                <primary-button\r\n-                    path=\"/chat\"\r\n-                    text=\"Iniciar atendimento\"\r\n-                /> -->\r\n         </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1664132548934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,11 @@\n     border-radius:  50%  0%  0% 50% ;\r\n     opacity: 0.3;\r\n     z-index: -1;\r\n }\r\n+.landing-page__content {\r\n+    display: flex;\r\n+    align-items: center;;\r\n+}\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664132560476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,10 @@\n     z-index: -1;\r\n }\r\n .landing-page__content {\r\n     display: flex;\r\n-    align-items: center;;\r\n+    align-items: center;\r\n+    flex-direction: column;\r\n }\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664132628118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,15 +30,14 @@\n }\r\n </script>\r\n \r\n <style scoped>\r\n-/* .home__content {\r\n-    width: 300px;\r\n-    position: absolute;\r\n-    bottom: 0;\r\n-    left: -60px;\r\n-    border-radius: 50%;\r\n-} */\r\n+.landing-page__container {\r\n+    height: 100vh;\r\n+    width: 100%;\r\n+    display: grid;\r\n+    grid-template-columns: 1fr 1fr;\r\n+}\r\n \r\n .landing-page__-background {\r\n     position: absolute;\r\n     right: 0;\r\n"
+                },
+                {
+                    "date": 1664132642664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,9 @@\n }\r\n .landing-page__content {\r\n     display: flex;\r\n     align-items: center;\r\n+    justify-content: center;\r\n     flex-direction: column;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1664132682788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,7 +54,10 @@\n     align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n }\r\n+h1 {\r\n+    font-size: 40px;\r\n+}\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664132701925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n+    text-align: justify;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n }\r\n"
+                },
+                {
+                    "date": 1664132713336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,8 @@\n     z-index: -1;\r\n }\r\n .landing-page__content {\r\n     display: flex;\r\n-    align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n     text-align: justify;\r\n }\r\n"
+                },
+                {
+                    "date": 1664132724839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n     z-index: -1;\r\n }\r\n .landing-page__content {\r\n     display: flex;\r\n+    align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n     text-align: justify;\r\n }\r\n"
+                },
+                {
+                    "date": 1664132751867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n-    text-align: justify;\r\n+    text-align: start;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n }\r\n"
+                },
+                {
+                    "date": 1664132759113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n-    text-align: start;\r\n+    text-align: start !important;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n }\r\n"
+                },
+                {
+                    "date": 1664132767884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,8 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n-    text-align: start !important;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n }\r\n"
+                },
+                {
+                    "date": 1664132824384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,7 +57,10 @@\n }\r\n h1 {\r\n     font-size: 40px;\r\n }\r\n+h4 {\r\n+    font-size: 28px;\r\n+}\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664132835499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,8 +59,9 @@\n     font-size: 40px;\r\n }\r\n h4 {\r\n     font-size: 28px;\r\n+    font-weight: 300;\r\n }\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664132843559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     font-size: 40px;\r\n }\r\n h4 {\r\n     font-size: 28px;\r\n-    font-weight: 300;\r\n+    font-weight: 400;\r\n }\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664132855002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,8 +56,9 @@\n     flex-direction: column;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n+    margin: 0;\r\n }\r\n h4 {\r\n     font-size: 28px;\r\n     font-weight: 400;\r\n"
+                },
+                {
+                    "date": 1664132866005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,9 @@\n }\r\n h4 {\r\n     font-size: 28px;\r\n     font-weight: 400;\r\n+    margin: 0;\r\n }\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664132887868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,10 @@\n .landing-page__-background {\r\n     position: absolute;\r\n     right: 0;\r\n     bottom: 0;\r\n-    width: 828px;\r\n-    height: 828px;\r\n+    width: 600px;\r\n+    height: 600px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius:  50%  0%  0% 50% ;\r\n     opacity: 0.3;\r\n     z-index: -1;\r\n"
+                },
+                {
+                    "date": 1664132899508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,10 @@\n .landing-page__-background {\r\n     position: absolute;\r\n     right: 0;\r\n     bottom: 0;\r\n-    width: 600px;\r\n-    height: 600px;\r\n+    width: 800px;\r\n+    height: 800px;\r\n     background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n     border-radius:  50%  0%  0% 50% ;\r\n     opacity: 0.3;\r\n     z-index: -1;\r\n"
+                },
+                {
+                    "date": 1664132946574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,8 +57,9 @@\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n+    color: #6857DB;\r\n }\r\n h4 {\r\n     font-size: 28px;\r\n     font-weight: 400;\r\n"
+                },
+                {
+                    "date": 1664133076390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,13 @@\n         <div class=\"landing-page__content\">\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n+        <lottie\r\n+            :options=\"defaultOptions\"\r\n+            :width=\"200\"\r\n+            :height=\"200\"\r\n+        />\r\n   </div>\r\n </template>\r\n \r\n <script>\r\n"
+                },
+                {
+                    "date": 1664133082324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   </div>\r\n </template>\r\n \r\n <script>\r\n-import * as animationData from '../assets/animations/wave.json';\r\n+import * as animationData from '../assets/animations/painting.json';\r\n import PrimaryButton from '../components/PrimaryButton.vue';\r\n \r\n export default {\r\n     name: 'Landing',\r\n"
+                },
+                {
+                    "date": 1664133105663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,15 @@\n         <div class=\"landing-page__content\">\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n-        <lottie\r\n-            :options=\"defaultOptions\"\r\n-            :width=\"200\"\r\n-            :height=\"200\"\r\n-        />\r\n+        <div class=\"landing-page__content\">\r\n+            <lottie\r\n+                :options=\"defaultOptions\"\r\n+                :width=\"200\"\r\n+                :height=\"200\"\r\n+            />\r\n+        </div>\r\n   </div>\r\n </template>\r\n \r\n <script>\r\n"
+                },
+                {
+                    "date": 1664133117190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n   <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__-background\" />\r\n \r\n-        <div class=\"landing-page__content\">\r\n+        <div class=\"landing-page__content-left\">\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n         <div class=\"landing-page__content\">\r\n"
+                },
+                {
+                    "date": 1664133127808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n     border-radius:  50%  0%  0% 50% ;\r\n     opacity: 0.3;\r\n     z-index: -1;\r\n }\r\n-.landing-page__content {\r\n+.landing-page__content-left {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1664133134320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         <div class=\"landing-page__content-left\">\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n-        <div class=\"landing-page__content\">\r\n+        <div class=\"landing-page__content-right\">\r\n             <lottie\r\n                 :options=\"defaultOptions\"\r\n                 :width=\"200\"\r\n                 :height=\"200\"\r\n"
+                },
+                {
+                    "date": 1664133143870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,11 @@\n     align-items: center;\r\n     justify-content: center;\r\n     flex-direction: column;\r\n }\r\n+.landing-page__content-right {\r\n+    \r\n+}\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n     color: #6857DB;\r\n"
+                },
+                {
+                    "date": 1664133156107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,8 @@\n     width: 100%;\r\n     display: grid;\r\n     grid-template-columns: 1fr 1fr;\r\n }\r\n-\r\n .landing-page__-background {\r\n     position: absolute;\r\n     right: 0;\r\n     bottom: 0;\r\n@@ -62,9 +61,11 @@\n     justify-content: center;\r\n     flex-direction: column;\r\n }\r\n .landing-page__content-right {\r\n-    \r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664133168809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n         </div>\r\n         <div class=\"landing-page__content-right\">\r\n             <lottie\r\n                 :options=\"defaultOptions\"\r\n-                :width=\"200\"\r\n-                :height=\"200\"\r\n+                :width=\"500\"\r\n+                :height=\"500\"\r\n             />\r\n         </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1664133178908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n         </div>\r\n         <div class=\"landing-page__content-right\">\r\n             <lottie\r\n                 :options=\"defaultOptions\"\r\n-                :width=\"500\"\r\n-                :height=\"500\"\r\n+                :width=\"400\"\r\n+                :height=\"400\"\r\n             />\r\n         </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1664133195054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n         </div>\r\n         <div class=\"landing-page__content-right\">\r\n             <lottie\r\n                 :options=\"defaultOptions\"\r\n-                :width=\"400\"\r\n-                :height=\"400\"\r\n+                :width=\"350\"\r\n+                :height=\"350\"\r\n             />\r\n         </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1664133241791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,6 @@\n <template>\r\n   <div class=\"landing-page__container\">\r\n-        <div class=\"landing-page__-background\" />\r\n-\r\n         <div class=\"landing-page__content-left\">\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n@@ -43,19 +41,8 @@\n     width: 100%;\r\n     display: grid;\r\n     grid-template-columns: 1fr 1fr;\r\n }\r\n-.landing-page__-background {\r\n-    position: absolute;\r\n-    right: 0;\r\n-    bottom: 0;\r\n-    width: 800px;\r\n-    height: 800px;\r\n-    background-image: linear-gradient( rgba(255,0,0,0), #97ADFA, rgba(255,0,0,0));\r\n-    border-radius:  50%  0%  0% 50% ;\r\n-    opacity: 0.3;\r\n-    z-index: -1;\r\n-}\r\n .landing-page__content-left {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n"
+                },
+                {
+                    "date": 1664133352812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,9 @@\n .landing-page__content-right {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n+    background-color: black;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664133373178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     background-color: black;\r\n+     border-radius:  50%  0%  0% 50% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664133385310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     background-color: black;\r\n-     border-radius:  50%  0%  0% 50% ;\r\n+     border-radius:  30%  0%  0% 30% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664133401046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     background-color: black;\r\n-     border-radius:  30%  0%  0% 30% ;\r\n+     border-radius:  40%  0%  0% 40% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664133416307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n .landing-page__content-right {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    background-color: black;\r\n+    background-color: #DCDCDC;\r\n      border-radius:  40%  0%  0% 40% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n"
+                },
+                {
+                    "date": 1664133466080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     background-color: #DCDCDC;\r\n-     border-radius:  40%  0%  0% 40% ;\r\n+     border-radius:  80%  0%  0% 80% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664133493614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n .landing-page__content-right {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    background-color: #DCDCDC;\r\n+    background-color: #97ADFA;\r\n      border-radius:  80%  0%  0% 80% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n"
+                },
+                {
+                    "date": 1664133513482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     background-color: #97ADFA;\r\n+    opacity: .4;\r\n      border-radius:  80%  0%  0% 80% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n"
+                },
+                {
+                    "date": 1664133529662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,8 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     background-color: #97ADFA;\r\n-    opacity: .4;\r\n      border-radius:  80%  0%  0% 80% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n"
+                },
+                {
+                    "date": 1664133535320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n .landing-page__content-right {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    background-color: #97ADFA;\r\n+    background-color: #97acfa70;\r\n      border-radius:  80%  0%  0% 80% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n"
+                },
+                {
+                    "date": 1664133543992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n .landing-page__content-right {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    background-color: #97acfa70;\r\n+    background-color: #97acfa2b;\r\n      border-radius:  80%  0%  0% 80% ;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n"
+                },
+                {
+                    "date": 1664133718180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <template>\r\n   <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__content-left\">\r\n+            <img src=\"@/assets/frank.svg\" />\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n         <div class=\"landing-page__content-right\">\r\n"
+                },
+                {
+                    "date": 1664134009726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__content-left\">\r\n-            <img src=\"@/assets/frank.svg\" />\r\n+            <img src=\"@/assets/logo.svg\" />\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n         <div class=\"landing-page__content-right\">\r\n"
+                },
+                {
+                    "date": 1664134029906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,7 +65,10 @@\n     font-size: 28px;\r\n     font-weight: 400;\r\n     margin: 0;\r\n }\r\n+img {\r\n+    width: 300px;\r\n+}\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664134038125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n     font-weight: 400;\r\n     margin: 0;\r\n }\r\n img {\r\n-    width: 300px;\r\n+    width: 150px;\r\n }\r\n \r\n \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664134177952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <template>\r\n+<div>\r\n   <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__content-left\">\r\n             <img src=\"@/assets/logo.svg\" />\r\n             <h1>{{ title }}</h1>\r\n@@ -12,8 +13,23 @@\n                 :height=\"350\"\r\n             />\r\n         </div>\r\n   </div>\r\n+    <div class=\"landing-page__container\">\r\n+        <div class=\"landing-page__content-left\">\r\n+            <img src=\"@/assets/logo.svg\" />\r\n+            <h1>{{ title }}</h1>\r\n+            <h4>{{ text }}</h4>\r\n+        </div>\r\n+        <div class=\"landing-page__content-right\">\r\n+            <lottie\r\n+                :options=\"defaultOptions\"\r\n+                :width=\"350\"\r\n+                :height=\"350\"\r\n+            />\r\n+        </div>\r\n+  </div>\r\n+</div>\r\n </template>\r\n \r\n <script>\r\n import * as animationData from '../assets/animations/painting.json';\r\n"
+                },
+                {
+                    "date": 1664134210975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n <div>\r\n   <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__content-left\">\r\n-            <img src=\"@/assets/logo.svg\" />\r\n+            <!-- <img src=\"@/assets/logo.svg\" /> -->\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n         <div class=\"landing-page__content-right\">\r\n"
+                },
+                {
+                    "date": 1664134266896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n <div>\r\n-  <div class=\"landing-page__container\">\r\n+    <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__content-left\">\r\n             <!-- <img src=\"@/assets/logo.svg\" /> -->\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n@@ -12,23 +12,16 @@\n                 :width=\"350\"\r\n                 :height=\"350\"\r\n             />\r\n         </div>\r\n-  </div>\r\n+    </div>\r\n     <div class=\"landing-page__container\">\r\n         <div class=\"landing-page__content-left\">\r\n             <img src=\"@/assets/logo.svg\" />\r\n             <h1>{{ title }}</h1>\r\n             <h4>{{ text }}</h4>\r\n         </div>\r\n-        <div class=\"landing-page__content-right\">\r\n-            <lottie\r\n-                :options=\"defaultOptions\"\r\n-                :width=\"350\"\r\n-                :height=\"350\"\r\n-            />\r\n-        </div>\r\n-  </div>\r\n+    </div>\r\n </div>\r\n </template>\r\n \r\n <script>\r\n"
+                },
+                {
+                    "date": 1664134848194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n \r\n <script>\r\n import * as animationData from '../assets/animations/painting.json';\r\n import PrimaryButton from '../components/PrimaryButton.vue';\r\n+import CardInformation from '../components/CardInformation.vue';\r\n \r\n export default {\r\n     name: 'Landing',\r\n     data() {\r\n@@ -40,8 +41,9 @@\n         }\r\n     },\r\n     components: {\r\n         PrimaryButton,\r\n+        CardInformation\r\n     }\r\n }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1664134873399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,10 @@\n                 :height=\"350\"\r\n             />\r\n         </div>\r\n     </div>\r\n-    <div class=\"landing-page__container\">\r\n-        <div class=\"landing-page__content-left\">\r\n-            <img src=\"@/assets/logo.svg\" />\r\n-            <h1>{{ title }}</h1>\r\n-            <h4>{{ text }}</h4>\r\n-        </div>\r\n+    <div class=\"landing-page__information\">\r\n+        <card-information />\r\n     </div>\r\n </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1664134892472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n             />\r\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n-        <card-information />\r\n+        <card-information \r\n+            iconName=\"Não sei\"\r\n+        />\r\n     </div>\r\n </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1664134915308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,10 @@\n     </div>\r\n     <div class=\"landing-page__information\">\r\n         <card-information \r\n             iconName=\"Não sei\"\r\n+            alt=\"nao sei\"\r\n+            title=\"NAO SEI PORRA\"\r\n         />\r\n     </div>\r\n </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1664134939541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n         <card-information \r\n             iconName=\"Não sei\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n+            text=\"VSF\"\r\n         />\r\n     </div>\r\n </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1664134985407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n             />\r\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n+        <h1>teste</h1>\r\n         <card-information \r\n             iconName=\"Não sei\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n"
+                },
+                {
+                    "date": 1664134994069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n             />\r\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n-        <h1>teste</h1>\r\n         <card-information \r\n             iconName=\"Não sei\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n"
+                },
+                {
+                    "date": 1664135059224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n         <card-information \r\n-            iconName=\"Não sei\"\r\n+            iconName=\"frank\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n"
+                },
+                {
+                    "date": 1664135120933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n         <card-information \r\n-            iconName=\"frank\"\r\n+            iconName=\"@/assets/icons/frank.svg\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n"
+                },
+                {
+                    "date": 1664135147325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n         <card-information \r\n-            iconName=\"@/assets/icons/frank.svg\"\r\n+            iconName=\"../assets/logo.svg\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n"
+                },
+                {
+                    "date": 1664135177843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n         <card-information \r\n-            iconName=\"../assets/logo.svg\"\r\n+            iconName=\"logo.svg\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n"
+                },
+                {
+                    "date": 1664135243606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n+        <ion-icon name=\"heart\"></ion-icon>\r\n     </div>\r\n </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1664135255722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,8 @@\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n-        <ion-icon name=\"heart\"></ion-icon>\r\n     </div>\r\n </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1664135295349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n         <card-information \r\n-            iconName=\"logo.svg\"\r\n+            iconName=\"heart\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n"
+                },
+                {
+                    "date": 1664136009758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,26 @@\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n+        <card-information \r\n+            iconName=\"heart\"\r\n+            alt=\"nao sei\"\r\n+            title=\"NAO SEI PORRA\"\r\n+            text=\"VSF\"\r\n+        />\r\n+        <card-information \r\n+            iconName=\"heart\"\r\n+            alt=\"nao sei\"\r\n+            title=\"NAO SEI PORRA\"\r\n+            text=\"VSF\"\r\n+        />\r\n+        <card-information \r\n+            iconName=\"heart\"\r\n+            alt=\"nao sei\"\r\n+            title=\"NAO SEI PORRA\"\r\n+            text=\"VSF\"\r\n+        />\r\n     </div>\r\n </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1664136043127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,8 +85,13 @@\n     justify-content: center;\r\n     background-color: #97acfa2b;\r\n      border-radius:  80%  0%  0% 80% ;\r\n }\r\n+.landing-page__information {\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+}\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n     color: #6857DB;\r\n"
+                },
+                {
+                    "date": 1664136054519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,8 +89,9 @@\n .landing-page__information {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n+    gap: 20px;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664136061853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,9 +89,9 @@\n .landing-page__information {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    gap: 20px;\r\n+    gap: 40px;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664136091202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,8 +90,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     gap: 40px;\r\n+    margin-top: 100px;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664136108600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,8 +91,9 @@\n     align-items: center;\r\n     justify-content: center;\r\n     gap: 40px;\r\n     margin-top: 100px;\r\n+    margin-bottom: 100px;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664136118057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,9 +89,9 @@\n .landing-page__information {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    gap: 40px;\r\n+    gap: +0px;\r\n     margin-top: 100px;\r\n     margin-bottom: 100px;\r\n }\r\n h1 {\r\n"
+                },
+                {
+                    "date": 1664136136145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,11 +89,11 @@\n .landing-page__information {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    gap: +0px;\r\n-    margin-top: 100px;\r\n-    margin-bottom: 100px;\r\n+    gap: 60px;\r\n+    margin-top: 120px;\r\n+    margin-bottom: 120px;\r\n }\r\n h1 {\r\n     font-size: 40px;\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1664136341829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </div>\r\n     </div>\r\n     <div class=\"landing-page__information\">\r\n         <card-information \r\n-            iconName=\"heart\"\r\n+            iconName=\"star-outline\"\r\n             alt=\"nao sei\"\r\n             title=\"NAO SEI PORRA\"\r\n             text=\"VSF\"\r\n         />\r\n"
+                },
+                {
+                    "date": 1664136359370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n     <div class=\"landing-page__information\">\r\n         <card-information \r\n             iconName=\"star-outline\"\r\n             alt=\"nao sei\"\r\n-            title=\"NAO SEI PORRA\"\r\n-            text=\"VSF\"\r\n+            title=\"QUALIDADE\"\r\n+            text=\"\"\r\n         />\r\n         <card-information \r\n             iconName=\"heart\"\r\n             alt=\"nao sei\"\r\n"
+                },
+                {
+                    "date": 1664136382784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         />\r\n         <card-information \r\n             iconName=\"heart\"\r\n             alt=\"nao sei\"\r\n-            title=\"NAO SEI PORRA\"\r\n+            title=\"DESEMPENHO\"\r\n             text=\"VSF\"\r\n         />\r\n         <card-information \r\n             iconName=\"heart\"\r\n"
+                }
+            ],
+            "date": 1664130406461,
+            "name": "Commit-0",
+            "content": "<template>\r\n    <h1>OIIIIIIIIIIIIIIIIII</h1>\r\n</template>"
+        }
+    ]
+}
