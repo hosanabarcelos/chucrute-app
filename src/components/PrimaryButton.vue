@@ -29,15 +29,23 @@ export default {
 <style scoped>
 
 .button {
-    font-size: .9rem;
-    border-radius: .3rem;
-    padding: .8rem 1.2rem;
-    border: none;
-    font-weight: 500;
-    color: #FFF;
-    background-color: #6857db;
+    align-items: center;
+    background-color: #424783;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
     cursor: pointer;
-    transition-duration: 0.4s;
+    display: inline-flex;
+    font-weight: 600;
+    justify-content: center;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 16px;
+    text-align: center;
+    transition: 200ms;
+    margin-top: 24px;
 }
 .button:hover {
     opacity: .9;

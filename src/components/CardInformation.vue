@@ -38,22 +38,24 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
     background-color: #FFF;
-    border: 2px solid #97acfa83;
+    transition: 200ms;
 }
 .card-information__container:hover {
-    box-shadow: #97acfa75 0px 7px 29px 0px;
+    box-shadow: #4247835d 0px 7px 29px 0px;
     transform: translateY(-18px);
 }
 h5 {
     margin: 0;
+    padding-top: 16px;
 }
 p {
     margin: 0;
 }
 ion-icon {
     font-size: 65px;
-    color: #5c4db0;
+    color: #8ac119;
 }
 </style>

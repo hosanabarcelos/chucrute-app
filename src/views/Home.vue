@@ -46,7 +46,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#97adfa;
+    background-color: #c1df893b;
 }
 .home__container-content {
     height: 600px;
