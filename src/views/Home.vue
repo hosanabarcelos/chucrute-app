@@ -46,7 +46,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #c1df893b;
+    background-color: #424783;
 }
 .home__container-content {
     height: 600px;
@@ -71,5 +71,8 @@ p {
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.5rem;
+}
+a {
+    text-decoration: none;
 }
 </style>
