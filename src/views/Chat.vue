@@ -4,8 +4,8 @@
             <div class="home__content">
                 <lottie
                     :options="defaultOptions"
-                    :width="100"
-                    :height="100"
+                    :width="80"
+                    :height="80"
                 />
                 <iframe 
                     src="https://web.powerva.microsoft.com/environments/Default-a70b6cf1-294d-4251-9456-c01e5624032b/bots/new_bot_8088a2608a50494e8d2c31c4bb2d2c1f/webchat"                    frameborder="0" 
