@@ -12,9 +12,7 @@
                     class="header"
                     style="width: 500px; height: 614px; border-radius: 10px;"
                 />
-                <router-link to="/">
-                    <button class="button">Sair</button>
-                </router-link>
+            
             </div>
         </div>
   </div>
