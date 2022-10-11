@@ -8,11 +8,13 @@
                     :height="100"
                 />
                 <iframe 
-                    src="https://web.powerva.microsoft.com/environments/Default-a70b6cf1-294d-4251-9456-c01e5624032b/bots/new_bot_8088a2608a50494e8d2c31c4bb2d2c1f/webchat" 
-                    frameborder="0" 
-                    id="header"
-                    style="width: 500px; height: 600px;"
+                    src="https://web.powerva.microsoft.com/environments/Default-a70b6cf1-294d-4251-9456-c01e5624032b/bots/new_bot_8088a2608a50494e8d2c31c4bb2d2c1f/webchat"                    frameborder="0" 
+                    class="header"
+                    style="width: 500px; height: 614px; border-radius: 10px;"
                 />
+                <router-link to="/">
+                    <button class="button">Sair</button>
+                </router-link>
             </div>
         </div>
   </div>
@@ -60,6 +62,28 @@ export default {
 .home__content {
     margin: 2.5rem;
     text-align: center;
+}
+.button {
+    align-items: center;
+    background-color: rgb(11, 85, 106);
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 600;
+    justify-content: center;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+    text-align: center;
+    transition: 200ms;
+    margin-top: 24px;
+}
+.button:hover {
+    opacity: .9;
 }
 .header .header-123 {
     display: none;
