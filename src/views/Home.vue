@@ -4,8 +4,8 @@
             <div class="home__content">
                 <lottie
                     :options="defaultOptions"
-                    :width="200"
-                    :height="200"
+                    :width="90"
+                    :height="90"
                 />
                 <h2>{{ title }}</h2>
                 <p>{{ subtitle }}</p>
@@ -49,8 +49,8 @@ export default {
     background-color: #424783;
 }
 .home__container-content {
-    height: 600px;
-    width: 500px;
+    height: 400px;
+    width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,13 +64,13 @@ export default {
     text-align: center;
 }
 h2 {
-    font-size: 1.3rem;
+    font-size: 16px;
     font-weight: 500;
 }
 p {
-    font-size: 1.1rem;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 1.5rem;
+    line-height: 18px;
 }
 a {
     text-decoration: none;

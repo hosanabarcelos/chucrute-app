@@ -10,7 +10,7 @@
                 <iframe 
                     src="https://web.powerva.microsoft.com/environments/Default-a70b6cf1-294d-4251-9456-c01e5624032b/bots/new_bot_8088a2608a50494e8d2c31c4bb2d2c1f/webchat"                    frameborder="0" 
                     class="header"
-                    style="width: 500px; height: 614px; border-radius: 10px;"
+                    style="width: 350px; height: 450px; border-radius: 10px; margin-top: 10px;"
                 />
                 <router-link to="/">
                     <button class="button">Sair</button>
@@ -49,8 +49,8 @@ export default {
     background-color: #424783;
 }
 .home__container-content {
-    height: 600px;
-    width: 500px;
+    height: 420px;
+    width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,13 +74,13 @@ export default {
     display: inline-flex;
     font-weight: 600;
     justify-content: center;
-    padding: 15px;
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 16px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
     text-align: center;
     transition: 200ms;
-    margin-top: 24px;
+    margin-top: 15px;
 }
 .button:hover {
     opacity: .9;

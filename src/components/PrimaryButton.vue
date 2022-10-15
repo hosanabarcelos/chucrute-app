@@ -39,10 +39,10 @@ export default {
     display: inline-flex;
     font-weight: 600;
     justify-content: center;
-    padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-size: 16px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
     text-align: center;
     transition: 200ms;
     margin-top: 24px;
